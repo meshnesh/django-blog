@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+
+<nav class="ck-vertical-nav text-right">
+        <a class="ck-nav-trigger">Menu</a>
+        <div class="ck-nav-wrapper">
+            <ul>
+                <li><a href="#home" class="active"><span class="label">Home</span></a></li>
+                <li><a href="#about"><span class="label">About Me</span></a></li>
+                <li><a href="#folio"><span class="label">My Works</span></a></li>
+                <li><a href="#contact"><span class="label">Contact Me</span></a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="row ck-section" id="home">
+        <!-- <img src="img/Drawing%20(3).png" class="column small-12"> -->
+    </section>
+    <hr>
+    <section class="row ck-section" id="about">
+        <div>
+            <h2>About me</h2>
+            <p>Hello,
+                <br>I live in Nairobi and currently do front end development of websites.</p>
+            <p>I believe simplicity is awesome.</p>
+            <p>If you feel the same way feel free to click<a href="#contact"> here </a> to get in touch.</p>
+        </div>
+    </section>
+    <hr>
+    <section class="row ck-section large-collapse" id="folio">
+       <!--  <h2 id="work">My Works</h2>
+        <div class="under-img columns small-10 small-offset-1 large-4 large-offset-0 ">
+            <img src="img/h_img.jpg">
+            <div class="over-txt">
+                <h3><a href="">Delani Studios</a></h3>
+                <p>Having fun with web design.</p>
+            </div>
+        </div>
+        <div class="under-img columns small-10 small-offset-1 large-4 large-offset-0 ">
+            <img src="img/rockstar_burger_redmond.jpg">
+            <div class="over-txt">
+                <h3><a href="">Fast &amp; good.</a></h3>
+                <p>The best fast food in Warsaw.</p>
+            </div>
+        </div>
+        <div class="under-img columns  small-10 small-offset-1 large-4  large-offset-0 end">
+            <img src="img/hero.jpg">
+            <div class="over-txt end">
+                <h3><a href="">Yolomy</a></h3>
+                <p>Only the trendiest clothes.
+                    <br> Nothing less.</p>
+            </div>
+        </div> -->
+    </section>
+    <hr>
+    <section class="row ck-section" id="contact">
+        <h2>Contact Me Using:</h2>
+        <form method="post" class="clearfix">
+            <input type="text" placeholder="Name..." required id="left" class="clear">
+            <input type="text" placeholder="Email..." required id="right" class="clear">
+            <textarea placeholder="Your Message here" required class="clear" id="message"></textarea>
+            <input type="submit" value="submit" id="submit">
+        </form>
+    </section>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>
+		{% block head_title %} 
+		Jester
+		{% endblock head_title %}
+	</title>
+	<!-- Foundation css -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.1.2/foundation.min.css">
+	<!-- App css -->
+	<link rel="stylesheet" href="{% static 'css/base.css' %}">
+	<meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
+    <script src="{% static 'js/js/modernizr.js' %}"></script>
+	</head>
+	<body>
+		<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+
+		<div class="container">
+			{% block content %}
+			{% endblock content%}
+		</div>
+		<script src="{% static 'js/firebase.js' %}"></script>
+    <script src="{% static 'js/js/jquery-2.1.4.js' %}"></script>
+    <script src="{% static 'js/js/main.js' %}"></script>
+    <script src="{% static 'js/vendor/jquery.min.js' %}"></script>
+    <script src="{% static 'js/vendor/what-input.min.js' %}"></script>
+    <script src="{% static 'js/foundation.min.js' %}"></script>
+		<!-- Jquery js -->
+		<script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+		<!-- Foundation js -->
+		<script src="https://cdn.jsdelivr.net/foundation/6.1.2/foundation.min.js"></script>
+	</body>
+</html>
