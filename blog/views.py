@@ -7,6 +7,8 @@ from django.db.models import Q
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse, HttpResponseRedirect, Http404
 
+from django.template import Context, Template
+
 from django.utils import timezone
 
 from urllib import quote_plus
@@ -75,11 +77,22 @@ def post_detail(request, slug=None):
 	}
 	return render(request, "post_detail.html", context)
 
+
+
 def post_list(request):
 	today = timezone.now().date()
 	queryset_list = Post.objects.active() # .order_by("-timestamp")
+	new_post_button = ""
 	if request.user.is_staff or request.user.is_superuser:
 		queryset_list = Post.objects.all()
+		new_post = "New Post"
+		button = Template("""
+				<div class="row column small-4 small centered">
+    				<a href="{{ instance.get_absolute_url }}create/ " class="button">{{ new_post }}</a>
+				</div>
+			""")
+		c = Context({"new_post": new_post})
+		new_post_button = button.render(c)
 
 	query = request.GET.get("q")
 	if query:
@@ -107,6 +120,7 @@ def post_list(request):
 		"title": "My User List",
 		"page_request_var ": page_request_var,
 		"today": today,
+		"new_post_button": new_post_button,
 	}
 	return render(request, "post_list.html", context)
 

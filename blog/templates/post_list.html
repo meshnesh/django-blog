@@ -9,9 +9,11 @@
         <input type="submit" class="column"  style="width:20%; margin: 1%;  padding: 1%;">
     </form>
 </div>
-<div class="row column small-4 small centered">
-    <a href="{{ instance.get_absolute_url }}create/ " class="button">New Post</a>
-</div>
+
+{% if new_post_button %}
+{{  new_post_button }}
+{% endif %}
+
 {% for obj in object_list %}
 <div class="row">
 	<div class="column small-10 small-centered">
