@@ -75,30 +75,36 @@ section {
 
 /*Opening nav*/
 
+
 .ck-nav-wrapper {
     transform: translateX(30vw);
     position: absolute;
 }
 .move0 {
-    animation: anim0 4s 1s forwards cubic-bezier(.4, .9, .3, .5);
-    /*    animation: space 3s 5s forwards ease-in;*/
+    animation: move0 1s  forwards cubic-bezier(.86, .01, .77, .78);
 }
-.move30 {
-    animation: anim30 4s 1s forwards cubic-bezier(.4, .9, .3, .5);
-}
-@keyframes anim0 {
+@keyframes move0 {
+    from {}
     to {
         transform: translateX(-10vw);
     }
 }
-@keyframes anim30 {
+.move50 {
+    animation: move50 1s  forwards cubic-bezier(.86, .01, .77, .78);
+}
+@keyframes move50 {
+    from {}
     to {
-        transform: translateX(-30vw);
+        transform: translateX(50vw);
     }
 }
-@keyframes space {
+.move100 {
+    animation: move100 1s  cubic-bezier(.86, .01, .77, .78) forwards;
+}
+@keyframes move100 {
+    from {}
     to {
-        transform: translateY(5vh);
+        transform: translateX(100%);
     }
 }
 
