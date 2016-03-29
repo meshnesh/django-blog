@@ -1,4 +1,6 @@
-jQuery(document).ready(function ($) {
+jQuery(document).ready(function ($) {  
+  var cw = $('.dbimgs').width();
+  $('.dbimgs').css({'height':cw+'px'});
    var trigger = $('.ck-nav-trigger'),
        wrapper = $('.ck-nav-wrapper'),
        section = $('.ck-section');

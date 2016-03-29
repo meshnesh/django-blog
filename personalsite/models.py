@@ -27,8 +27,8 @@ class Image(models.Model):
 		blank=True,
 		width_field="width_field",
 		height_field="height_field")
-	height_field = models.IntegerField(default=0)
-	width_field = models.IntegerField(default=0)
+	height_field = models.IntegerField(default=300)
+	width_field = models.IntegerField(default=300)
 	content = models.TextField()
 	
 	updated = models.DateTimeField(auto_now=False,auto_now_add=True)
