@@ -1,5 +1,10 @@
 from django.shortcuts import render
+from .models import Image
 
 # Create your views here.
 def home(request):
-	return render(request, "index.html", {"context": "site"})
+	image_queryset = Image.objects.all()
+	context = {
+		"images": image_queryset,
+	}
+	return render(request, "index.html", context)

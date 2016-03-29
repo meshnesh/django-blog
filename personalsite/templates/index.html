@@ -27,30 +27,18 @@
         </div>
     </section>
     <hr>
-    <section class="row ck-section large-collapse" id="folio">
-       <!--  <h2 id="work">My Works</h2>
-        <div class="under-img columns small-10 small-offset-1 large-4 large-offset-0 ">
-            <img src="img/h_img.jpg">
-            <div class="over-txt">
-                <h3><a href="">Delani Studios</a></h3>
-                <p>Having fun with web design.</p>
-            </div>
-        </div>
-        <div class="under-img columns small-10 small-offset-1 large-4 large-offset-0 ">
-            <img src="img/rockstar_burger_redmond.jpg">
-            <div class="over-txt">
-                <h3><a href="">Fast &amp; good.</a></h3>
-                <p>The best fast food in Warsaw.</p>
-            </div>
-        </div>
-        <div class="under-img columns  small-10 small-offset-1 large-4  large-offset-0 end">
-            <img src="img/hero.jpg">
-            <div class="over-txt end">
-                <h3><a href="">Yolomy</a></h3>
-                <p>Only the trendiest clothes.
-                    <br> Nothing less.</p>
-            </div>
-        </div> -->
+    <section class="row ck-section text-center" id="folio">
+    <h2 id="work">Folio</h2>
+    <section class="small-up-3">
+    {% for img in images %}
+    <section class="columns">
+    <img src="{{ img.image.url }}">
+    <h3><a href="">{{ img.title }}</a></h3>
+    <p>{{ img.content }}</p>
+
+    </section>
+    {% endfor %}
+    </section>
     </section>
     <hr>
     <section class="row ck-section" id="contact">

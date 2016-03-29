@@ -14,7 +14,7 @@ from django.utils.text import slugify
 
 class ImageManager(models.Manager):
 	def active(self, *args, **kwargs):
-		return super(PostManager, self).filter(draft=False).filter(publish__lte=timezone.now())
+		return super(ImageManager, self).filter(draft=False).filter(publish__lte=timezone.now())
 
 def upload_location(instance, filename):
 	return "%s%s"%(instance.id, filename)
@@ -59,8 +59,8 @@ def create_slug(instance, new_slug=None):
 		return create_slug(instance, new_slug=new_slug)
 	return slug
 
-def pre_save_post_receiver(sender, instance, *args, **kwargs):
+def pre_save_image_receiver(sender, instance, *args, **kwargs):
 	if not instance.slug:
 		instance.slug = create_slug(instance)
 
-pre_save.connect(pre_save_post_receiver, sender=Image)
+pre_save.connect(pre_save_image_receiver, sender=Image)
