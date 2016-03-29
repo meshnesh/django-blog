@@ -22,8 +22,9 @@
 
 		{{ instance.content|linebreaks }}<br>
 
-		<a href="{{ instance.get_absolute_url }}edit/ " class="button">Edit Post</a>
-		<a href="{{ instance.get_absolute_url }}delete/ " class="button">Delete Post</a>
+		{{ delete_post_button }}
+		{{ edit_post_button }}
+		
 		<p><div class="fb-like" data-href="{ request.build_absolute_uri }}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div></p>
 
 		<div>

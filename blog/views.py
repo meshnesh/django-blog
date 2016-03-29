@@ -69,11 +69,25 @@ def post_detail(request, slug=None):
 	if instance.draft or instance.publish > timezone.now().date():
 		if not request.user.is_staff or not request.user.is_superuser:
 			raise Http404
+	delete_post_button = ""
+	edit_post_button = ""
+	if request.user.is_staff or request.user.is_superuser:
+		delete_post = "Delete Post"
+		edit_post = "Edit Post"
+		delete_post_button = Template("""
+			<a href="{{ instance.get_absolute_url }}edit/ " class="button">{{ edit_post }}</a>
+			""").render(Context({"edit_post": edit_post}))
+		edit_post_button = Template("""
+			<a href="{{ instance.get_absolute_url }}delete/ " class="button">{{ delete_post }}</a>
+			""").render(Context({"delete_post": delete_post}))
+
 	share_string = quote_plus(instance.content)
 	context = {
 		"title": instance.title,
 		"instance": instance,
 		"share_string": share_string,
+		"delete_post_button": delete_post_button,
+		"edit_post_button": edit_post_button,
 	}
 	return render(request, "post_detail.html", context)
 
