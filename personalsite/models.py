@@ -30,6 +30,7 @@ class Image(models.Model):
 	height_field = models.IntegerField(default=300)
 	width_field = models.IntegerField(default=300)
 	content = models.TextField()
+	site_url = models.URLField(default= "")
 	
 	updated = models.DateTimeField(auto_now=False,auto_now_add=True)
 	timestamp = models.DateTimeField(auto_now=True,auto_now_add=False)
