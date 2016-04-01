@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "base2.html" %}
 {% load staticfiles %}
 {% block head %}
 
@@ -12,8 +12,10 @@
             <ul>
                 <li><a href="#home" class="active"><span class="label">Home</span></a></li>
                 <li><a href="#about"><span class="label">About Me</span></a></li>
+                <li><a href="{% url 'blog:list' %}" id="blog"><span class="label">Blog</span></a></li>
                 <li><a href="#folio"><span class="label">My Works</span></a></li>
                 <li><a href="#contact"><span class="label">Contact Me</span></a></li>
+
             </ul>
         </div>
     </nav>
