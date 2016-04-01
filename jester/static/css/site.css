@@ -6,10 +6,12 @@
 
 
 /*General styles*/
+@import url('https://fonts.googleapis.com/css?family=Lato|Oswald');
 
 body {
     background: rgb(32, 28, 37);
     overflow-x: hidden;
+    font-family: 'Lato', sans-serif;
 }
 h1,
 h2,
@@ -19,6 +21,7 @@ h5,
 h6,
 a {
     color: rgb(154, 119, 111);
+    font-family: 'Oswald', sans-serif;
 }
 a:hover {
     color: #fff;
