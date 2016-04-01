@@ -8,10 +8,12 @@
 		Jester
 		{% endblock head_title %}
 	</title>
+
 	<!-- Foundation css -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.1.2/foundation.min.css">
 	<!-- App css -->
 	<link rel="stylesheet" href="{% static 'css/base.css' %}">
+	{% block head %}{% endblock %}
 	</head>
 	<body>
 		<div id="fb-root"></div>
