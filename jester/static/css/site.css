@@ -44,10 +44,10 @@ h2 {
     margin-bottom: 5%;
 }
 h3 {
-    font-size: 1.5em;
+    font-size: 2em;
 }
 p {
-    font-size: 1em;
+    font-size: 1.5em;
 }
 section {
     width: 100vw;
@@ -152,8 +152,8 @@ section {
     color: rgb(154, 119, 111);
 }
 #submit{
-    position: absolute;
-    margin: 0 auto;
+    width:100px;
+    height: 30px;
 }
 #submit:hover{
     background: rgb(154, 119, 111);
@@ -209,4 +209,7 @@ section {
     #home {
         max-height: 100vh;
     }
+}
+p {
+    font-size: 1.5em;
 }
