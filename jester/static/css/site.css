@@ -151,7 +151,13 @@ section {
     background: none;
     color: rgb(154, 119, 111);
 }
-
+#submit{
+    position: absolute;
+    margin: 0 auto;
+}
+#submit:hover{
+    background: rgb(154, 119, 111);
+}
 /*Media queries*/
 
 @media only screen and (max-width: 40em) and (max-height: 200px) {
