@@ -36,8 +36,16 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    'gdstorage',
     'personalsite',
 )
+
+#
+# Google Drive Storage Settings
+#
+
+GOOGLE_DRIVE_STORAGE_KEY = 'c47d1893dbc165411ebe3ad8e6d77c335a7e5a58'
+GOOGLE_DRIVE_STORAGE_SERVICE_EMAIL = 'scu-451@sanguine-signal-126919.iam.gserviceaccount.com'
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',

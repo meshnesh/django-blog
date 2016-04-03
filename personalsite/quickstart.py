@@ -67,6 +67,3 @@ def main():
         print('Files:')
         for item in items:
             print('{0} ({1})'.format(item['name'], item['id']))
-
-if __name__ == '__main__':
-    main()
