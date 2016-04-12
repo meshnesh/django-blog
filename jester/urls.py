@@ -13,9 +13,8 @@ urlpatterns = [
 
     # url(r'^$', blog.views.index, name = "index"),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^', include("personalsite.urls", namespace="personalsite")),
     url(r'^blog/', include("blog.urls", namespace="blog")),
-    url(r'^db', blog.views.db, name = "db"),
+    url(r'^', include("personalsite.urls", namespace="personalsite")),
 ]
 if settings.DEBUG:
 	urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,6 +1,6 @@
 jQuery(document).ready(function ($) {
     var section = $('.ck-section'),
-        navigationItems = $('.ck-nav-wrapper a'),
+        navigationItems = $('.ck-nav-wrapper a.scroller'),
         trigger = $('.ck-nav-trigger'),
         wrapper = $('.ck-nav-wrapper');
     updateNavigation();

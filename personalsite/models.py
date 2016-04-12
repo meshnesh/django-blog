@@ -10,10 +10,7 @@ from django.core.urlresolvers import reverse
 from django.utils import timezone
 from django.utils.text import slugify
 
-from gdstorage.storage import GoogleDriveStorage
 
-# Define Google Drive Storage
-gd_storage = GoogleDriveStorage()
 
 # Create your models here.
 
@@ -29,7 +26,6 @@ class Image(models.Model):
 	slug = models.SlugField(unique=True)
 	image = models.ImageField(
 		upload_to = upload_location, 
-		storage = gd_storage,
 		null=True, 
 		blank=True,
 		width_field="width_field",

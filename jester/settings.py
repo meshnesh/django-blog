@@ -36,18 +36,9 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
-    'gdstorage',
     'personalsite',
 )
 
-drive_pk = os.path.join(BASE_DIR, 'privatekey.pem')
-
-#
-# Google Drive Storage Settings
-#
-
-GOOGLE_DRIVE_STORAGE_KEY = drive_pk
-GOOGLE_DRIVE_STORAGE_SERVICE_EMAIL = 'scu-451@sanguine-signal-126919.iam.gserviceaccount.com'
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -86,27 +77,27 @@ WSGI_APPLICATION = 'jester.wsgi.application'
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
 # DATABASES['default'] =  dj_database_url.config()
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'db',
-        'USER': 'chris',
-        'PASSWORD': 'Ichi1Go5',
-        'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
-        'PORT': '', 
-        'CONN_MAX_AGE': 500,
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'db',
+#         'USER': 'chris',
+#         'PASSWORD': 'Ichi1Go5',
+#         'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+#         'PORT': '', 
+#         'CONN_MAX_AGE': 500,
+#     }
+# }
 
-DATABASE_URL = 'postgresql:///db'
+# DATABASE_URL = 'postgresql:///db'
 
-DATABASES = {'default': dj_database_url.config(default=DATABASE_URL)}
+# DATABASES = {'default': dj_database_url.config(default=DATABASE_URL)}
 
 
 AUTH_PASSWORD_VALIDATORS = (

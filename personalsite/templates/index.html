@@ -10,11 +10,11 @@
         <a class="ck-nav-trigger">Menu</a>
         <div class="ck-nav-wrapper">
             <ul>
-                <li><a href="#home" class="active"><span class="label">Home</span></a></li>
-                <li><a href="#about"><span class="label">About Me</span></a></li>
+                <li><a href="#home" class="active"><span class="label scroller">Home</span></a></li>
+                <li><a href="#about"><span class="label scroller">About Me</span></a></li>
                 <li><a href="{% url 'blog:list' %}" id="blog"><span class="label">Blog</span></a></li>
-                <li><a href="#folio"><span class="label">My Works</span></a></li>
-                <li><a href="#contact"><span class="label">Contact Me</span></a></li>
+                <li><a href="#folio"><span class="label scroller">My Works</span></a></li>
+                <li><a href="#contact"><span class="label scroller">Contact Me</span></a></li>
 
             </ul>
         </div>
@@ -49,16 +49,19 @@
     <hr>
     <section class="row ck-section" id="contact">
         <h2>Contact Me Using:</h2>
-        <form method="post" class="clearfix text-center">
-            <input type="text" placeholder="Name..." required id="left" class="clear">
-            <input type="text" placeholder="Email..." required id="right" class="clear">
-            <textarea placeholder="Your Message here" required class="clear" id="message"></textarea>
-            <input type="submit" value="Submit" id="submit" class="clear">
+        
+        <form method="POST" action="https://formspree.io/cndeti@gmail.com" enctype="multipart/form-data" class="clearfix text-center">
+            {% csrf_token %}
+            <input type="text"  name= "name" placeholder="Name..." required id="left" class="clear">
+            <input type="text" placeholder="Email..." required id="right" class="clear" name="_replyto">
+            <textarea placeholder="Your Message here" required class="clear" id="message" name="message"></textarea>
+            <input type="submit" value="Send" id="submit" class="clear">
         </form>
     </section>
     
-    <script src="{% static 'js/firebase.js' %}"></script>
+    
     <script src="{% static 'js/js/jquery-2.1.4.js' %}"></script>
+    <script src="{% static 'js/firebase.js' %}"></script>
     <script src="{% static 'js/js/main.js' %}"></script>    
     <script src="{% static 'js/js/smoothscroll.js' %}"></script>
     <!-- // <script src="{% static 'js/vendor/jquery.min.js' %}"></script> -->
