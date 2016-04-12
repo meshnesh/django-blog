@@ -6,13 +6,14 @@
 {% endblock %}
 {% block content %}
 
+        
 <nav class="ck-vertical-nav text-right">
-        <a class="ck-nav-trigger">Menu</a>
+        <a href="{% url 'blog:list' %}" id="blog"><span class="menu">Blog</span></a>
+        <a class="ck-nav-trigger"><span class="menu">Menu</span></a>
         <div class="ck-nav-wrapper">
             <ul>
                 <li><a href="#home" class="active"><span class="label scroller">Home</span></a></li>
                 <li><a href="#about"><span class="label scroller">About Me</span></a></li>
-                <li><a href="{% url 'blog:list' %}" id="blog"><span class="label">Blog</span></a></li>
                 <li><a href="#folio"><span class="label scroller">My Works</span></a></li>
                 <li><a href="#contact"><span class="label scroller">Contact Me</span></a></li>
 
