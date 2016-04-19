@@ -13,6 +13,7 @@
 
 <body>
     <!--    LANDING PAGE-->
+
     <header>
 
         <h1>Landing Page Menu</h1>
@@ -30,6 +31,7 @@
         </nav>
 
     </header>
+
     <!--    END OF LANDING PAGE-->
 
 
@@ -38,7 +40,6 @@
 
 
     <!-- WORK -->
-
     <section id="work" class="not-fullscreen section">
         <div class="container-fluid content-a">
             <div class="work-inner-container content-b">
@@ -212,22 +213,143 @@
 
 
 
+    <section id="contact" class="not-fullscreen parallax section">
+        <div class="container content-a">
+            <div class="contact-inner-container content-b">
 
+                <div class="row">
+                    <div class="expanded row">
+                        <h2>{Contact Me}</h2>
+                        <hr>
+                        <p>Big or small, I've got a solution when you need it. Contact me and let me solve your problem.</p>
+                    </div>
+                    <!-- end col -->
+                </div>
+                <!-- end row -->
 
-    <div class="container">
-        <div class="container-inner">
-            <h1>{contact} <span>me</span>.</h1>
-            <nav>
-                <ul>
-                    <li><a href="#">T</a></li>
-                    <!--         <li><a href="#">s</a></li> -->
-                    <li><a href="#">g</a></li>
-                    <li><a href="#">+</a></li>
-                    <!--         <li><a href="#">R</a></li> -->
-                </ul>
-            </nav>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                        <div id="contact-form">
+                            <form method="post" action="">
+
+                                <div class="row medium-uncollapse large-collapse">
+
+                                    <div class="small-6 columns">
+                                        <div class="text-input">
+                                            <label for="name"><span class="required">*</span> Name:</label>
+                                            <input type="text" id="name" name="name" value="" placeholder="Your Name" required="required" />
+                                        </div>
+                                        <!-- end text-input -->
+                                    </div>
+                                    <!-- end col -->
+
+                                    <div class="small-6 columns">
+                                        <div class="text-input">
+                                            <label for="email"><span class="required">*</span> Email:</label>
+                                            <input type="email" id="email" name="email" value="" placeholder="johndoe@example.com" required="required" />
+                                        </div>
+                                        <!-- end text-input -->
+                                    </div>
+                                    <!-- end col -->
+
+                                </div>
+                                <!-- end row -->
+
+                                <div class="row medium-uncollapse large-collapse">
+
+                                    <div class="small-6 columns">
+                                        <div class="text-input">
+                                            <label for="phone">Phone:</label>
+                                            <input type="tel" id="phone" name="phone" value="" placeholder="+254-700-000000" />
+                                        </div>
+                                        <!-- end text-input -->
+                                    </div>
+                                    <!-- end col -->
+
+                                    <div class="small-6 columns">
+                                        <div class="text-input">
+                                            <label for="enquiry"><span class="required">*</span> Enquiry:</label>
+                                            <select id="enquiry" name="enquiry">
+                                                <option value="mobile-app">Back-End Web Design</option>
+                                                <option value="web">Front-End Web Design</option>
+                                                <option value="other">Other</option>
+                                            </select>
+                                        </div>
+                                        <!-- end text-input -->
+                                    </div>
+                                    <!-- end col -->
+
+                                </div>
+                                <!-- end row -->
+
+                                <div class="row">
+
+                                    <div class="column row">
+                                        <div class="text-message">
+                                            <label for="message"><span class="required">*</span> Message:</label>
+                                            <textarea id="message" name="message" placeholder="Your message must be more than 20 characters" required="required" data-minlength="20"></textarea>
+                                        </div>
+                                        <!-- end text-input -->
+                                    </div>
+                                    <!-- end col -->
+
+                                </div>
+                                <!-- end row -->
+
+                                <div class="row">
+
+                                    <div class="column row">
+                                        <p id="req-field-desc"><span class="required">*</span> indicates a required field.</p>
+                                        <br />
+                                        <button type="submit" value="Submit" id="submit-button" class="btn btn-primary">Submit</button>
+                                    </div>
+                                    <!-- end col-xs-12 -->
+
+                                </div>
+                                <!-- end row -->
+
+                            </form>
+                        </div>
+                        <!-- end form -->
+                    </div>
+                    <!-- end col -->
+                </div>
+                <!-- end row -->
+
+            </div>
+            <!-- end contact-inner-container -->
         </div>
-    </div>
+        <!-- end container -->
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer id="footer">
+        <div class="container content-a">
+            <div class="footer-inner-container content-b">
+
+                <div class="row">
+
+                    <div class="col-xs-12">
+                        <a href="#"><i class="fa-linkedin fa"></i></a>
+                        <a href="#"><i class="fa-dribbble fa"></i></a>
+                        <a href="#"><i class="fa-codepen fa"></i></a>
+                    </div>
+                    <!-- end col -->
+
+                    <div class="col-xs-12">
+                        <p>&copy; Chris Kiilu 2016. All Rights Reserved.</p>
+                    </div>
+                    <!-- end col -->
+
+                </div>
+                <!-- end row -->
+
+            </div>
+            <!-- end footer-inner-container -->
+        </div>
+        <!-- end container -->
+    </footer>
 
 
 
