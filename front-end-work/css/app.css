@@ -1,0 +1,37 @@
+html {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 3em;
+    text-align: center;
+    color: #111;
+}
+
+h1 {
+    text-transform: uppercase;
+    letter-spacing: .3em;
+}
+
+
+/* NAV */
+
+nav {
+    text-align: center;
+}
+
+nav ul li a {
+    color: #111;
+    text-decoration: none;
+    transition: 2s all;
+    border-bottom: 1px solid;
+    padding-bottom: .3em;
+}
+
+nav ul li a:hover {
+    padding-bottom: 2em;
+    color: #001F3F;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 .5em;
+}
