@@ -1,3 +1,5 @@
+/*HEADER SECTION THE LANDING PAGE*/
+
 html {
     font-family: Helvetica, Arial, sans-serif;
     margin: 3em;
@@ -35,3 +37,6 @@ nav ul li {
     display: inline-block;
     padding: 0 .5em;
 }
+
+
+/*END OF THE HEADER SECTION THE LANDING PAGE*/
