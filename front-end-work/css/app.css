@@ -1,5 +1,10 @@
+#work,
 header {
     height: 95vh;
+}
+
+.small-6 {
+    padding: 2%;
 }
 
 
@@ -123,7 +128,7 @@ nav ul li {
 }
 
 #contact-form .text-input {
-    border: #222222 1px solid;
+    /*    border: #222222 1px solid;*/
     padding: 15px;
     margin: 10px;
     text-align: left;
@@ -132,7 +137,7 @@ nav ul li {
 }
 
 #contact-form .text-message {
-    border: #222222 1px solid;
+    /*    border: #222222 1px solid;*/
     padding: 15px;
     margin: 10px;
     text-align: left;
